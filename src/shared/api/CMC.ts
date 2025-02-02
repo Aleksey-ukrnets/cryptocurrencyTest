@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 const API_KEY = "c084c2e0-8b36-4485-878a-0a50a46a11ff";
 
 const coinMarketCapApi = axios.create({
-  baseURL: import.meta.env.VITE_DEV ?  "/api" : 'https://pro-api.coinmarketcap.com',
+  baseURL: import.meta.env.VITE_DEV ? "/api" : window.location.origin,
   headers: { "X-CMC_PRO_API_KEY": API_KEY },
 });
 
